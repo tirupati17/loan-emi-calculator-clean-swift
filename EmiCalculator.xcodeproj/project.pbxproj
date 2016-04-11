@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		202ADDD9E7E0F348AF74B649 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60709EA11D882DF64425B9BD /* libPods.a */; };
+		D5BE783A1CBB954A006C8B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE78391CBB954A006C8B98 /* AppDelegate.swift */; };
+		D5BE783F1CBB954A006C8B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5BE783D1CBB954A006C8B98 /* Main.storyboard */; };
+		D5BE78411CBB954A006C8B98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5BE78401CBB954A006C8B98 /* Assets.xcassets */; };
+		D5BE78441CBB954A006C8B98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5BE78421CBB954A006C8B98 /* LaunchScreen.storyboard */; };
+		D5BE784F1CBB954A006C8B98 /* EmiCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE784E1CBB954A006C8B98 /* EmiCalculatorTests.swift */; };
+		D5BE785A1CBB954A006C8B98 /* EmiCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE78591CBB954A006C8B98 /* EmiCalculatorUITests.swift */; };
+		D5BE78701CBB95AE006C8B98 /* EmiCalculatorConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE78691CBB95AE006C8B98 /* EmiCalculatorConfigurator.swift */; };
+		D5BE78711CBB95AE006C8B98 /* EmiCalculatorConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE78691CBB95AE006C8B98 /* EmiCalculatorConfigurator.swift */; };
+		D5BE78721CBB95AE006C8B98 /* EmiCalculatorConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE78691CBB95AE006C8B98 /* EmiCalculatorConfigurator.swift */; };
+		D5BE78731CBB95AE006C8B98 /* EmiCalculatorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE786A1CBB95AE006C8B98 /* EmiCalculatorInteractor.swift */; };
+		D5BE78741CBB95AE006C8B98 /* EmiCalculatorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE786A1CBB95AE006C8B98 /* EmiCalculatorInteractor.swift */; };
+		D5BE78751CBB95AE006C8B98 /* EmiCalculatorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE786A1CBB95AE006C8B98 /* EmiCalculatorInteractor.swift */; };
+		D5BE78761CBB95AE006C8B98 /* EmiCalculatorModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE786B1CBB95AE006C8B98 /* EmiCalculatorModels.swift */; };
+		D5BE78771CBB95AE006C8B98 /* EmiCalculatorModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE786B1CBB95AE006C8B98 /* EmiCalculatorModels.swift */; };
+		D5BE78781CBB95AE006C8B98 /* EmiCalculatorModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE786B1CBB95AE006C8B98 /* EmiCalculatorModels.swift */; };
+		D5BE78791CBB95AE006C8B98 /* EmiCalculatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE786C1CBB95AE006C8B98 /* EmiCalculatorPresenter.swift */; };
+		D5BE787A1CBB95AE006C8B98 /* EmiCalculatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE786C1CBB95AE006C8B98 /* EmiCalculatorPresenter.swift */; };
+		D5BE787B1CBB95AE006C8B98 /* EmiCalculatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE786C1CBB95AE006C8B98 /* EmiCalculatorPresenter.swift */; };
+		D5BE787C1CBB95AE006C8B98 /* EmiCalculatorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE786D1CBB95AE006C8B98 /* EmiCalculatorRouter.swift */; };
+		D5BE787D1CBB95AE006C8B98 /* EmiCalculatorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE786D1CBB95AE006C8B98 /* EmiCalculatorRouter.swift */; };
+		D5BE787E1CBB95AE006C8B98 /* EmiCalculatorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE786D1CBB95AE006C8B98 /* EmiCalculatorRouter.swift */; };
+		D5BE787F1CBB95AE006C8B98 /* EmiCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE786E1CBB95AE006C8B98 /* EmiCalculatorViewController.swift */; };
+		D5BE78801CBB95AE006C8B98 /* EmiCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE786E1CBB95AE006C8B98 /* EmiCalculatorViewController.swift */; };
+		D5BE78811CBB95AE006C8B98 /* EmiCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE786E1CBB95AE006C8B98 /* EmiCalculatorViewController.swift */; };
+		D5BE78821CBB95AE006C8B98 /* EmiCalculatorWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE786F1CBB95AE006C8B98 /* EmiCalculatorWorker.swift */; };
+		D5BE78831CBB95AE006C8B98 /* EmiCalculatorWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE786F1CBB95AE006C8B98 /* EmiCalculatorWorker.swift */; };
+		D5BE78841CBB95AE006C8B98 /* EmiCalculatorWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE786F1CBB95AE006C8B98 /* EmiCalculatorWorker.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D5BE784B1CBB954A006C8B98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5BE782E1CBB954A006C8B98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5BE78351CBB954A006C8B98;
+			remoteInfo = EmiCalculator;
+		};
+		D5BE78561CBB954A006C8B98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5BE782E1CBB954A006C8B98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5BE78351CBB954A006C8B98;
+			remoteInfo = EmiCalculator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		60709EA11D882DF64425B9BD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		98C38AEEA1A31193ED140EDB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		AF98EE93686659D290CF3BE7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D5BE78361CBB954A006C8B98 /* EmiCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmiCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5BE78391CBB954A006C8B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D5BE783E1CBB954A006C8B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D5BE78401CBB954A006C8B98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D5BE78431CBB954A006C8B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D5BE78451CBB954A006C8B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5BE784A1CBB954A006C8B98 /* EmiCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmiCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5BE784E1CBB954A006C8B98 /* EmiCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmiCalculatorTests.swift; sourceTree = "<group>"; };
+		D5BE78501CBB954A006C8B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5BE78551CBB954A006C8B98 /* EmiCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmiCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5BE78591CBB954A006C8B98 /* EmiCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmiCalculatorUITests.swift; sourceTree = "<group>"; };
+		D5BE785B1CBB954A006C8B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5BE78691CBB95AE006C8B98 /* EmiCalculatorConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmiCalculatorConfigurator.swift; path = Scenes/EmiCalculator/EmiCalculatorConfigurator.swift; sourceTree = "<group>"; };
+		D5BE786A1CBB95AE006C8B98 /* EmiCalculatorInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmiCalculatorInteractor.swift; path = Scenes/EmiCalculator/EmiCalculatorInteractor.swift; sourceTree = "<group>"; };
+		D5BE786B1CBB95AE006C8B98 /* EmiCalculatorModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmiCalculatorModels.swift; path = Scenes/EmiCalculator/EmiCalculatorModels.swift; sourceTree = "<group>"; };
+		D5BE786C1CBB95AE006C8B98 /* EmiCalculatorPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmiCalculatorPresenter.swift; path = Scenes/EmiCalculator/EmiCalculatorPresenter.swift; sourceTree = "<group>"; };
+		D5BE786D1CBB95AE006C8B98 /* EmiCalculatorRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmiCalculatorRouter.swift; path = Scenes/EmiCalculator/EmiCalculatorRouter.swift; sourceTree = "<group>"; };
+		D5BE786E1CBB95AE006C8B98 /* EmiCalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmiCalculatorViewController.swift; path = Scenes/EmiCalculator/EmiCalculatorViewController.swift; sourceTree = "<group>"; };
+		D5BE786F1CBB95AE006C8B98 /* EmiCalculatorWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmiCalculatorWorker.swift; path = Scenes/EmiCalculator/EmiCalculatorWorker.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D5BE78331CBB954A006C8B98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				202ADDD9E7E0F348AF74B649 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5BE78471CBB954A006C8B98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5BE78521CBB954A006C8B98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B54D124F2E12B1A208FF4ACA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF98EE93686659D290CF3BE7 /* Pods.debug.xcconfig */,
+				98C38AEEA1A31193ED140EDB /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D5BE782D1CBB954A006C8B98 = {
+			isa = PBXGroup;
+			children = (
+				D5BE78381CBB954A006C8B98 /* EmiCalculator */,
+				D5BE784D1CBB954A006C8B98 /* EmiCalculatorTests */,
+				D5BE78581CBB954A006C8B98 /* EmiCalculatorUITests */,
+				D5BE78371CBB954A006C8B98 /* Products */,
+				B54D124F2E12B1A208FF4ACA /* Pods */,
+				E15A0B49DE7C10C9529BD88E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D5BE78371CBB954A006C8B98 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D5BE78361CBB954A006C8B98 /* EmiCalculator.app */,
+				D5BE784A1CBB954A006C8B98 /* EmiCalculatorTests.xctest */,
+				D5BE78551CBB954A006C8B98 /* EmiCalculatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D5BE78381CBB954A006C8B98 /* EmiCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				D5BE78671CBB9570006C8B98 /* Scenes */,
+				D5BE78391CBB954A006C8B98 /* AppDelegate.swift */,
+				D5BE783D1CBB954A006C8B98 /* Main.storyboard */,
+				D5BE78401CBB954A006C8B98 /* Assets.xcassets */,
+				D5BE78421CBB954A006C8B98 /* LaunchScreen.storyboard */,
+				D5BE78451CBB954A006C8B98 /* Info.plist */,
+			);
+			path = EmiCalculator;
+			sourceTree = "<group>";
+		};
+		D5BE784D1CBB954A006C8B98 /* EmiCalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				D5BE784E1CBB954A006C8B98 /* EmiCalculatorTests.swift */,
+				D5BE78501CBB954A006C8B98 /* Info.plist */,
+			);
+			path = EmiCalculatorTests;
+			sourceTree = "<group>";
+		};
+		D5BE78581CBB954A006C8B98 /* EmiCalculatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D5BE78591CBB954A006C8B98 /* EmiCalculatorUITests.swift */,
+				D5BE785B1CBB954A006C8B98 /* Info.plist */,
+			);
+			path = EmiCalculatorUITests;
+			sourceTree = "<group>";
+		};
+		D5BE78671CBB9570006C8B98 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D5BE78681CBB9577006C8B98 /* EmiCalculator */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		D5BE78681CBB9577006C8B98 /* EmiCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				D5BE78691CBB95AE006C8B98 /* EmiCalculatorConfigurator.swift */,
+				D5BE786A1CBB95AE006C8B98 /* EmiCalculatorInteractor.swift */,
+				D5BE786B1CBB95AE006C8B98 /* EmiCalculatorModels.swift */,
+				D5BE786C1CBB95AE006C8B98 /* EmiCalculatorPresenter.swift */,
+				D5BE786D1CBB95AE006C8B98 /* EmiCalculatorRouter.swift */,
+				D5BE786E1CBB95AE006C8B98 /* EmiCalculatorViewController.swift */,
+				D5BE786F1CBB95AE006C8B98 /* EmiCalculatorWorker.swift */,
+			);
+			name = EmiCalculator;
+			sourceTree = "<group>";
+		};
+		E15A0B49DE7C10C9529BD88E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60709EA11D882DF64425B9BD /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D5BE78351CBB954A006C8B98 /* EmiCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5BE785E1CBB954A006C8B98 /* Build configuration list for PBXNativeTarget "EmiCalculator" */;
+			buildPhases = (
+				D64F999C61B60B22078AED4B /* Check Pods Manifest.lock */,
+				D5BE78321CBB954A006C8B98 /* Sources */,
+				D5BE78331CBB954A006C8B98 /* Frameworks */,
+				D5BE78341CBB954A006C8B98 /* Resources */,
+				56F5A167748B26AEC753F258 /* Embed Pods Frameworks */,
+				9824CDB6609075409DBFBF1A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmiCalculator;
+			productName = EmiCalculator;
+			productReference = D5BE78361CBB954A006C8B98 /* EmiCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D5BE78491CBB954A006C8B98 /* EmiCalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5BE78611CBB954A006C8B98 /* Build configuration list for PBXNativeTarget "EmiCalculatorTests" */;
+			buildPhases = (
+				D5BE78461CBB954A006C8B98 /* Sources */,
+				D5BE78471CBB954A006C8B98 /* Frameworks */,
+				D5BE78481CBB954A006C8B98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5BE784C1CBB954A006C8B98 /* PBXTargetDependency */,
+			);
+			name = EmiCalculatorTests;
+			productName = EmiCalculatorTests;
+			productReference = D5BE784A1CBB954A006C8B98 /* EmiCalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D5BE78541CBB954A006C8B98 /* EmiCalculatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5BE78641CBB954A006C8B98 /* Build configuration list for PBXNativeTarget "EmiCalculatorUITests" */;
+			buildPhases = (
+				D5BE78511CBB954A006C8B98 /* Sources */,
+				D5BE78521CBB954A006C8B98 /* Frameworks */,
+				D5BE78531CBB954A006C8B98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5BE78571CBB954A006C8B98 /* PBXTargetDependency */,
+			);
+			name = EmiCalculatorUITests;
+			productName = EmiCalculatorUITests;
+			productReference = D5BE78551CBB954A006C8B98 /* EmiCalculatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D5BE782E1CBB954A006C8B98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = CelerStudio;
+				TargetAttributes = {
+					D5BE78351CBB954A006C8B98 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					D5BE78491CBB954A006C8B98 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = D5BE78351CBB954A006C8B98;
+					};
+					D5BE78541CBB954A006C8B98 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = D5BE78351CBB954A006C8B98;
+					};
+				};
+			};
+			buildConfigurationList = D5BE78311CBB954A006C8B98 /* Build configuration list for PBXProject "EmiCalculator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D5BE782D1CBB954A006C8B98;
+			productRefGroup = D5BE78371CBB954A006C8B98 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D5BE78351CBB954A006C8B98 /* EmiCalculator */,
+				D5BE78491CBB954A006C8B98 /* EmiCalculatorTests */,
+				D5BE78541CBB954A006C8B98 /* EmiCalculatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D5BE78341CBB954A006C8B98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5BE78441CBB954A006C8B98 /* LaunchScreen.storyboard in Resources */,
+				D5BE78411CBB954A006C8B98 /* Assets.xcassets in Resources */,
+				D5BE783F1CBB954A006C8B98 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5BE78481CBB954A006C8B98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5BE78531CBB954A006C8B98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		56F5A167748B26AEC753F258 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9824CDB6609075409DBFBF1A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D64F999C61B60B22078AED4B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D5BE78321CBB954A006C8B98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5BE787F1CBB95AE006C8B98 /* EmiCalculatorViewController.swift in Sources */,
+				D5BE78731CBB95AE006C8B98 /* EmiCalculatorInteractor.swift in Sources */,
+				D5BE78701CBB95AE006C8B98 /* EmiCalculatorConfigurator.swift in Sources */,
+				D5BE78821CBB95AE006C8B98 /* EmiCalculatorWorker.swift in Sources */,
+				D5BE783A1CBB954A006C8B98 /* AppDelegate.swift in Sources */,
+				D5BE78791CBB95AE006C8B98 /* EmiCalculatorPresenter.swift in Sources */,
+				D5BE787C1CBB95AE006C8B98 /* EmiCalculatorRouter.swift in Sources */,
+				D5BE78761CBB95AE006C8B98 /* EmiCalculatorModels.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5BE78461CBB954A006C8B98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5BE78711CBB95AE006C8B98 /* EmiCalculatorConfigurator.swift in Sources */,
+				D5BE78801CBB95AE006C8B98 /* EmiCalculatorViewController.swift in Sources */,
+				D5BE78771CBB95AE006C8B98 /* EmiCalculatorModels.swift in Sources */,
+				D5BE78831CBB95AE006C8B98 /* EmiCalculatorWorker.swift in Sources */,
+				D5BE787D1CBB95AE006C8B98 /* EmiCalculatorRouter.swift in Sources */,
+				D5BE787A1CBB95AE006C8B98 /* EmiCalculatorPresenter.swift in Sources */,
+				D5BE78741CBB95AE006C8B98 /* EmiCalculatorInteractor.swift in Sources */,
+				D5BE784F1CBB954A006C8B98 /* EmiCalculatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5BE78511CBB954A006C8B98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5BE78721CBB95AE006C8B98 /* EmiCalculatorConfigurator.swift in Sources */,
+				D5BE78811CBB95AE006C8B98 /* EmiCalculatorViewController.swift in Sources */,
+				D5BE78781CBB95AE006C8B98 /* EmiCalculatorModels.swift in Sources */,
+				D5BE78841CBB95AE006C8B98 /* EmiCalculatorWorker.swift in Sources */,
+				D5BE787E1CBB95AE006C8B98 /* EmiCalculatorRouter.swift in Sources */,
+				D5BE787B1CBB95AE006C8B98 /* EmiCalculatorPresenter.swift in Sources */,
+				D5BE78751CBB95AE006C8B98 /* EmiCalculatorInteractor.swift in Sources */,
+				D5BE785A1CBB954A006C8B98 /* EmiCalculatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D5BE784C1CBB954A006C8B98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5BE78351CBB954A006C8B98 /* EmiCalculator */;
+			targetProxy = D5BE784B1CBB954A006C8B98 /* PBXContainerItemProxy */;
+		};
+		D5BE78571CBB954A006C8B98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5BE78351CBB954A006C8B98 /* EmiCalculator */;
+			targetProxy = D5BE78561CBB954A006C8B98 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D5BE783D1CBB954A006C8B98 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5BE783E1CBB954A006C8B98 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D5BE78421CBB954A006C8B98 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5BE78431CBB954A006C8B98 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D5BE785C1CBB954A006C8B98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D5BE785D1CBB954A006C8B98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D5BE785F1CBB954A006C8B98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF98EE93686659D290CF3BE7 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EmiCalculator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.celerstudio.EmiCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D5BE78601CBB954A006C8B98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98C38AEEA1A31193ED140EDB /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EmiCalculator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.celerstudio.EmiCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D5BE78621CBB954A006C8B98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = EmiCalculatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.celerstudio.EmiCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmiCalculator.app/EmiCalculator";
+			};
+			name = Debug;
+		};
+		D5BE78631CBB954A006C8B98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = EmiCalculatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.celerstudio.EmiCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmiCalculator.app/EmiCalculator";
+			};
+			name = Release;
+		};
+		D5BE78651CBB954A006C8B98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EmiCalculatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.celerstudio.EmiCalculatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = EmiCalculator;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D5BE78661CBB954A006C8B98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EmiCalculatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.celerstudio.EmiCalculatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = EmiCalculator;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D5BE78311CBB954A006C8B98 /* Build configuration list for PBXProject "EmiCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5BE785C1CBB954A006C8B98 /* Debug */,
+				D5BE785D1CBB954A006C8B98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5BE785E1CBB954A006C8B98 /* Build configuration list for PBXNativeTarget "EmiCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5BE785F1CBB954A006C8B98 /* Debug */,
+				D5BE78601CBB954A006C8B98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5BE78611CBB954A006C8B98 /* Build configuration list for PBXNativeTarget "EmiCalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5BE78621CBB954A006C8B98 /* Debug */,
+				D5BE78631CBB954A006C8B98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5BE78641CBB954A006C8B98 /* Build configuration list for PBXNativeTarget "EmiCalculatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5BE78651CBB954A006C8B98 /* Debug */,
+				D5BE78661CBB954A006C8B98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D5BE782E1CBB954A006C8B98 /* Project object */;
+}
