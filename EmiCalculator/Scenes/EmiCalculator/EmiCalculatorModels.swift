@@ -13,12 +13,30 @@ import UIKit
 
 struct EmiCalculatorRequest
 {
+    struct RequestEmiCalculation {
+        var loanAmount : Double
+        var loanTenure : NSInteger
+        var interestRate : Double
+    }
+    var requestEmiCalculation : RequestEmiCalculation
 }
 
 struct EmiCalculatorResponse
 {
+    struct ResponseEmiCalculation {
+        var totalPayment : Double
+        var totalPaymentInterest : Double
+        var loanEmi : Double
+    }
+    var responseEmiCalculation : ResponseEmiCalculation
 }
 
 struct EmiCalculatorViewModel
 {
+    struct DisplayEmiCalculation {
+        var totalPayment : Double
+        var totalPaymentInterest : Double
+        var loanEmi : Double
+    }
+    var emiCalculation : DisplayEmiCalculation
 }

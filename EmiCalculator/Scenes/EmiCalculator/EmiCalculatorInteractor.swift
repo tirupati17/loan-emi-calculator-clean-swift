@@ -13,31 +13,34 @@ import UIKit
 
 protocol EmiCalculatorInteractorInput
 {
-  func doSomething(request: EmiCalculatorRequest)
+    func doSomething(request: EmiCalculatorRequest)
 }
 
 protocol EmiCalculatorInteractorOutput
 {
-  func presentSomething(response: EmiCalculatorResponse)
+    func presentSomething(response: EmiCalculatorResponse)
 }
 
 class EmiCalculatorInteractor: EmiCalculatorInteractorInput
 {
-  var output: EmiCalculatorInteractorOutput!
-  var worker: EmiCalculatorWorker!
-  
-  // MARK: Business logic
-  
-  func doSomething(request: EmiCalculatorRequest)
-  {
-    // NOTE: Create some Worker to do the work
+    var output: EmiCalculatorInteractorOutput!
+    var worker: EmiCalculatorWorker!
     
-    worker = EmiCalculatorWorker()
-    worker.doSomeWork()
+    // MARK: Business logic
     
-    // NOTE: Pass the result to the Presenter
-    
-    let response = EmiCalculatorResponse()
-    output.presentSomething(response)
-  }
+    func doSomething(request: EmiCalculatorRequest)
+    {
+        // NOTE: Create some Worker to do the work
+        worker = EmiCalculatorWorker()
+        let requestEmiCalculation = request.requestEmiCalculation
+        let emi = worker.calculateEmi(Double(requestEmiCalculation.loanAmount), loanTenure: Double(requestEmiCalculation.loanTenure), interestRate: Double(requestEmiCalculation.interestRate))
+        let totalPayment = worker.calculateTotalPayment(emi, loanTenure: requestEmiCalculation.loanTenure)
+        let totalPayableInterest = worker.calculateTotalInterestPayable(totalPayment, loanAmount: Double(requestEmiCalculation.loanAmount))
+        // NOTE: Pass the result to the Presenter
+        
+        let response = EmiCalculatorResponse.ResponseEmiCalculation(totalPayment : Double(totalPayment), totalPaymentInterest : totalPayableInterest, loanEmi : Double(emi))
+        let emiCalculatorResponse = EmiCalculatorResponse(responseEmiCalculation : response)
+
+        output.presentSomething(emiCalculatorResponse)
+    }
 }

@@ -10,54 +10,227 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 protocol EmiCalculatorViewControllerInput
 {
-  func displaySomething(viewModel: EmiCalculatorViewModel)
+    func displaySomething(viewModel: EmiCalculatorViewModel)
 }
 
 protocol EmiCalculatorViewControllerOutput
 {
-  func doSomething(request: EmiCalculatorRequest)
+    func doSomething(request: EmiCalculatorRequest)
 }
 
-class EmiCalculatorViewController: UIViewController, EmiCalculatorViewControllerInput
+class EmiCalculatorViewController: UIViewController, EmiCalculatorViewControllerInput, UITextFieldDelegate
 {
-  var output: EmiCalculatorViewControllerOutput!
-  var router: EmiCalculatorRouter!
-  
-  // MARK: Object lifecycle
-  
-  override func awakeFromNib()
-  {
-    super.awakeFromNib()
-    EmiCalculatorConfigurator.sharedInstance.configure(self)
-  }
-  
-  // MARK: View lifecycle
-  
-  override func viewDidLoad()
-  {
-    super.viewDidLoad()
-    doSomethingOnLoad()
-  }
-  
-  // MARK: Event handling
-  
-  func doSomethingOnLoad()
-  {
-    // NOTE: Ask the Interactor to do some work
+    var output: EmiCalculatorViewControllerOutput!
+    var router: EmiCalculatorRouter!
     
-    let request = EmiCalculatorRequest()
-    output.doSomething(request)
-  }
-  
-  // MARK: Display logic
-  
-  func displaySomething(viewModel: EmiCalculatorViewModel)
-  {
-    // NOTE: Display the result from the Presenter
+    @IBOutlet var tableView: UITableView!
+    @IBOutlet var totalInterestPayableLabel: UILabel!
+    @IBOutlet var totalPaymentInterestPlusPrincipalLabel: UILabel!
+    @IBOutlet var loanEmiLabel: UILabel!
+    @IBOutlet weak var bannerView: GADBannerView!
     
-    // nameTextField.text = viewModel.name
-  }
+    var loanTenureVal: NSInteger = 0;
+    var interestRateVal: Double = 0;
+    var amountVal: Double = 0;
+    
+    // MARK: Object lifecycle
+    
+    override func awakeFromNib()
+    {
+        super.awakeFromNib()
+        EmiCalculatorConfigurator.sharedInstance.configure(self)
+    }
+    
+    // MARK: View lifecycle
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        self.title = "EMI Calculator"
+        
+        bannerView.adUnitID = "ca-app-pub-4961045217927492/7307627166"
+        bannerView.rootViewController = self
+        bannerView.loadRequest(GADRequest())
+    }
+    
+    // MARK: Event handling
+    
+    func calculateEmiAction(amount : String)
+    {
+        // NOTE: Ask the Interactor to do some work
+        let loanAmountVal = Double(amount)
+        
+        let requestEmiCalculationVal = EmiCalculatorRequest.RequestEmiCalculation(loanAmount : loanAmountVal!, loanTenure: self.loanTenureVal, interestRate: self.interestRateVal);
+        let request = EmiCalculatorRequest(requestEmiCalculation : requestEmiCalculationVal)
+        output.doSomething(request)
+    }
+    
+    // MARK: Display logic
+    
+    func displaySomething(viewModel: EmiCalculatorViewModel)
+    {
+        // NOTE: Display the result from the Presenter
+        
+        let formatter = NSNumberFormatter()
+        formatter.numberStyle = .CurrencyStyle
+        
+        self.totalPaymentInterestPlusPrincipalLabel.text = formatter.stringFromNumber(viewModel.emiCalculation.totalPayment.isNaN ? 0 : viewModel.emiCalculation.totalPayment)
+        self.totalInterestPayableLabel.text = formatter.stringFromNumber(viewModel.emiCalculation.totalPaymentInterest.isNaN ? 0 : viewModel.emiCalculation.totalPaymentInterest)
+        self.loanEmiLabel.text =  formatter.stringFromNumber(viewModel.emiCalculation.loanEmi.isNaN ? 0 : viewModel.emiCalculation.loanEmi)
+    }
+    
+    func returnCellForIndexPath(indexPath : NSIndexPath) -> UITableViewCell! {
+        return self.tableView.cellForRowAtIndexPath(indexPath)! as UITableViewCell
+    }
+    
+    func returnAmountField() -> UITextField {
+        return self.returnCellForIndexPath(NSIndexPath.init(forRow: 0, inSection: 0)).viewWithTag(111) as! UITextField
+    }
+    
+    func returnLoanTenureField() -> UITextField {
+        return self.returnCellForIndexPath(NSIndexPath.init(forRow: 1, inSection: 0)).viewWithTag(221) as! UITextField
+    }
+    
+    func returnLoanTenureSlider() -> UISlider {
+        return self.returnCellForIndexPath(NSIndexPath.init(forRow: 1, inSection: 0)).viewWithTag(222) as! UISlider
+    }
+    
+    func returnInterestRateField() -> UITextField {
+        return self.returnCellForIndexPath(NSIndexPath.init(forRow: 2, inSection: 0)).viewWithTag(331) as! UITextField
+    }
+    
+    func returnInterestRateSlider() -> UISlider {
+        return self.returnCellForIndexPath(NSIndexPath.init(forRow: 2, inSection: 0)).viewWithTag(332) as! UISlider
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        switch (indexPath.row) {
+        case 0:
+            return 80;
+        case 1:
+            return 90;
+        case 2:
+            return 90;
+        case 3:
+            return 100;
+        default:
+            break;
+        }
+        return 70.0
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell:UITableViewCell = (self.tableView!.dequeueReusableCellWithIdentifier("cell\(indexPath.row)")! as UITableViewCell)
+        
+        self.configureCellForTableView(tableView, withCell: cell, withIndexPath: indexPath)
+        return cell
+    }
+    
+    func configureCellForTableView(tableView: UITableView, withCell cell: UITableViewCell, withIndexPath indexPath: NSIndexPath) {
+        switch (indexPath.row) {
+        case 0:
+            let textField:UITextField = cell.viewWithTag(111) as! UITextField
+            textField.delegate = self
+            
+            break;
+        case 1:
+            let loanTenureSlider:UISlider = cell.viewWithTag(222) as! UISlider
+            loanTenureSlider.addTarget(self, action: "sliderValueDidChange:", forControlEvents: .ValueChanged)
+            break;
+        case 2:
+            let interestRateSlider:UISlider = cell.viewWithTag(332) as! UISlider
+            interestRateSlider.addTarget(self, action: "sliderValueDidChange:", forControlEvents: .ValueChanged)
+        default:
+            break;
+        }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("You selected cell #\(indexPath.row)!")
+    }
+    
+    func applyRedBorderOnAmount() {
+        self.returnAmountField().layer.borderColor = UIColor.redColor().CGColor
+        self.returnAmountField().layer.borderWidth = 1;
+        self.returnAmountField().layer.cornerRadius = 5;
+    }
+    
+    func clearRedBorderOnAmount() {
+        self.returnAmountField().layer.borderColor = UIColor.clearColor().CGColor
+        self.returnAmountField().layer.borderWidth = 0;
+        self.returnAmountField().layer.cornerRadius = 0;
+    }
+    
+    func validateAmountField() -> Bool {
+        if (self.returnAmountField().text == nil || self.returnAmountField().text == "") {
+            self.applyRedBorderOnAmount();
+            self.tableView.scrollToRowAtIndexPath(NSIndexPath.init(forRow: 0, inSection: 0), atScrollPosition: .Top, animated: true)
+            
+            self.returnLoanTenureSlider().value = Float(self.loanTenureVal)
+            self.returnInterestRateSlider().value = Float(self.interestRateVal)
+            return false
+        } else {
+            self.clearRedBorderOnAmount()
+            return true
+        }
+    }
+    
+    func sliderValueDidChange(sender: UISlider) {
+        if (!validateAmountField()) {
+            return
+        }
+        
+        switch (sender.tag)
+        {
+        case 222:
+            self.loanTenureVal = Int(floor(sender.value))
+            returnLoanTenureField().text = String(format :"%.0f years", floor(sender.value))
+            break;
+        case 332:
+            self.interestRateVal = Double(floor(sender.value))
+            returnInterestRateField().text = String(format : "%.0f", floor(sender.value))
+            break;
+        default:
+            break;
+        }
+        calculateEmiAction(self.returnAmountField().text!)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        self.tableView.scrollRectToVisible(CGRectMake(0, 48, self.tableView.frame.size.width, self.tableView.frame.size.width), animated: true)
+        return true;
+    }
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        let filtered = string.componentsSeparatedByCharactersInSet(NSCharacterSet(charactersInString:"0123456789.").invertedSet).joinWithSeparator("")
+        if (string == filtered) {
+            var txtAfterUpdate: NSString = textField.text! as NSString
+            txtAfterUpdate = txtAfterUpdate.stringByReplacingCharactersInRange(range, withString: string)
+            
+            if (textField.tag == 331) { //Interest Rate Text Field
+                self.interestRateVal = txtAfterUpdate.doubleValue
+                calculateEmiAction(String(format : "%.0f", floor(self.amountVal)))
+            } else { //Amount Text Field
+                self.clearRedBorderOnAmount();
+                self.amountVal = txtAfterUpdate.doubleValue
+                calculateEmiAction(String(format : "%.0f", floor(self.amountVal)))
+            }
+            return true
+        } else {
+            return false
+        }
+    }
 }

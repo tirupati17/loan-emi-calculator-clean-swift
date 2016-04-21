@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		202ADDD9E7E0F348AF74B649 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60709EA11D882DF64425B9BD /* libPods.a */; };
+		D53FB7121CC2740000A13ACC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D53FB70D1CC2740000A13ACC /* Default-568h@2x.png */; };
+		D53FB7131CC2740000A13ACC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D53FB70E1CC2740000A13ACC /* Default.png */; };
+		D53FB7141CC2740000A13ACC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D53FB70F1CC2740000A13ACC /* Default@2x.png */; };
+		D53FB7151CC2740000A13ACC /* icon_emi_1024.png in Resources */ = {isa = PBXBuildFile; fileRef = D53FB7101CC2740000A13ACC /* icon_emi_1024.png */; };
+		D53FB7161CC2740000A13ACC /* iphone_5s.png in Resources */ = {isa = PBXBuildFile; fileRef = D53FB7111CC2740000A13ACC /* iphone_5s.png */; };
 		D5BE783A1CBB954A006C8B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE78391CBB954A006C8B98 /* AppDelegate.swift */; };
 		D5BE783F1CBB954A006C8B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5BE783D1CBB954A006C8B98 /* Main.storyboard */; };
 		D5BE78411CBB954A006C8B98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5BE78401CBB954A006C8B98 /* Assets.xcassets */; };
@@ -58,6 +63,12 @@
 		60709EA11D882DF64425B9BD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C38AEEA1A31193ED140EDB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AF98EE93686659D290CF3BE7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D53FB70D1CC2740000A13ACC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D53FB70E1CC2740000A13ACC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D53FB70F1CC2740000A13ACC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D53FB7101CC2740000A13ACC /* icon_emi_1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_emi_1024.png; sourceTree = "<group>"; };
+		D53FB7111CC2740000A13ACC /* iphone_5s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone_5s.png; sourceTree = "<group>"; };
+		D5475A6D1CBF849F0039318E /* EmiCalculator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EmiCalculator-Bridging-Header.h"; sourceTree = "<group>"; };
 		D5BE78361CBB954A006C8B98 /* EmiCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmiCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5BE78391CBB954A006C8B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5BE783E1CBB954A006C8B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,11 +82,11 @@
 		D5BE78591CBB954A006C8B98 /* EmiCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmiCalculatorUITests.swift; sourceTree = "<group>"; };
 		D5BE785B1CBB954A006C8B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5BE78691CBB95AE006C8B98 /* EmiCalculatorConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmiCalculatorConfigurator.swift; path = Scenes/EmiCalculator/EmiCalculatorConfigurator.swift; sourceTree = "<group>"; };
-		D5BE786A1CBB95AE006C8B98 /* EmiCalculatorInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmiCalculatorInteractor.swift; path = Scenes/EmiCalculator/EmiCalculatorInteractor.swift; sourceTree = "<group>"; };
+		D5BE786A1CBB95AE006C8B98 /* EmiCalculatorInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmiCalculatorInteractor.swift; path = Scenes/EmiCalculator/EmiCalculatorInteractor.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		D5BE786B1CBB95AE006C8B98 /* EmiCalculatorModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmiCalculatorModels.swift; path = Scenes/EmiCalculator/EmiCalculatorModels.swift; sourceTree = "<group>"; };
 		D5BE786C1CBB95AE006C8B98 /* EmiCalculatorPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmiCalculatorPresenter.swift; path = Scenes/EmiCalculator/EmiCalculatorPresenter.swift; sourceTree = "<group>"; };
 		D5BE786D1CBB95AE006C8B98 /* EmiCalculatorRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmiCalculatorRouter.swift; path = Scenes/EmiCalculator/EmiCalculatorRouter.swift; sourceTree = "<group>"; };
-		D5BE786E1CBB95AE006C8B98 /* EmiCalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmiCalculatorViewController.swift; path = Scenes/EmiCalculator/EmiCalculatorViewController.swift; sourceTree = "<group>"; };
+		D5BE786E1CBB95AE006C8B98 /* EmiCalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmiCalculatorViewController.swift; path = Scenes/EmiCalculator/EmiCalculatorViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		D5BE786F1CBB95AE006C8B98 /* EmiCalculatorWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmiCalculatorWorker.swift; path = Scenes/EmiCalculator/EmiCalculatorWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +125,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D53FB70C1CC2740000A13ACC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D53FB70D1CC2740000A13ACC /* Default-568h@2x.png */,
+				D53FB70E1CC2740000A13ACC /* Default.png */,
+				D53FB70F1CC2740000A13ACC /* Default@2x.png */,
+				D53FB7101CC2740000A13ACC /* icon_emi_1024.png */,
+				D53FB7111CC2740000A13ACC /* iphone_5s.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		D5BE782D1CBB954A006C8B98 = {
 			isa = PBXGroup;
 			children = (
@@ -139,12 +162,14 @@
 		D5BE78381CBB954A006C8B98 /* EmiCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				D53FB70C1CC2740000A13ACC /* Resources */,
 				D5BE78671CBB9570006C8B98 /* Scenes */,
 				D5BE78391CBB954A006C8B98 /* AppDelegate.swift */,
 				D5BE783D1CBB954A006C8B98 /* Main.storyboard */,
 				D5BE78401CBB954A006C8B98 /* Assets.xcassets */,
 				D5BE78421CBB954A006C8B98 /* LaunchScreen.storyboard */,
 				D5BE78451CBB954A006C8B98 /* Info.plist */,
+				D5475A6D1CBF849F0039318E /* EmiCalculator-Bridging-Header.h */,
 			);
 			path = EmiCalculator;
 			sourceTree = "<group>";
@@ -268,6 +293,7 @@
 				TargetAttributes = {
 					D5BE78351CBB954A006C8B98 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 495XWEJ924;
 					};
 					D5BE78491CBB954A006C8B98 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -304,9 +330,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53FB7141CC2740000A13ACC /* Default@2x.png in Resources */,
 				D5BE78441CBB954A006C8B98 /* LaunchScreen.storyboard in Resources */,
+				D53FB7161CC2740000A13ACC /* iphone_5s.png in Resources */,
+				D53FB7151CC2740000A13ACC /* icon_emi_1024.png in Resources */,
+				D53FB7121CC2740000A13ACC /* Default-568h@2x.png in Resources */,
 				D5BE78411CBB954A006C8B98 /* Assets.xcassets in Resources */,
 				D5BE783F1CBB954A006C8B98 /* Main.storyboard in Resources */,
+				D53FB7131CC2740000A13ACC /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,10 +572,14 @@
 			baseConfigurationReference = AF98EE93686659D290CF3BE7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = EmiCalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.celerstudio.EmiCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "EmiCalculator/EmiCalculator-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -553,10 +588,14 @@
 			baseConfigurationReference = 98C38AEEA1A31193ED140EDB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = EmiCalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.celerstudio.EmiCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "EmiCalculator/EmiCalculator-Bridging-Header.h";
 			};
 			name = Release;
 		};

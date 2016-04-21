@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        self.defaultInitialization()
         return true
     }
 
@@ -38,6 +39,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     }
 
+    func defaultInitialization() {
+        Flurry.startSession("BQ8XGG4MGDHKGD3NKWXQ")
+        Flurry.setCrashReportingEnabled(true)
+        
+        Appirater.setAppId("1105890730")
+        Appirater.setDaysUntilPrompt(7)
+        Appirater.setUsesUntilPrompt(5)
+        Appirater.setSignificantEventsUntilPrompt(-1)
+        Appirater.setTimeBeforeReminding(2)
+        Appirater.setDebug(false)
+        Appirater.appLaunched(true)
+    }
 
 }
 

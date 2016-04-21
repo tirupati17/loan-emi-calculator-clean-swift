@@ -13,25 +13,27 @@ import UIKit
 
 protocol EmiCalculatorPresenterInput
 {
-  func presentSomething(response: EmiCalculatorResponse)
+    func presentSomething(response: EmiCalculatorResponse)
 }
 
 protocol EmiCalculatorPresenterOutput: class
 {
-  func displaySomething(viewModel: EmiCalculatorViewModel)
+    func displaySomething(viewModel: EmiCalculatorViewModel)
 }
 
 class EmiCalculatorPresenter: EmiCalculatorPresenterInput
 {
-  weak var output: EmiCalculatorPresenterOutput!
-  
-  // MARK: Presentation logic
-  
-  func presentSomething(response: EmiCalculatorResponse)
-  {
-    // NOTE: Format the response from the Interactor and pass the result back to the View Controller
+    weak var output: EmiCalculatorPresenterOutput!
     
-    let viewModel = EmiCalculatorViewModel()
-    output.displaySomething(viewModel)
-  }
+    // MARK: Presentation logic
+    
+    func presentSomething(response: EmiCalculatorResponse)
+    {
+        // NOTE: Format the response from the Interactor and pass the result back to the View Controller
+        
+        let viewModel = EmiCalculatorViewModel.DisplayEmiCalculation(totalPayment : Double(response.responseEmiCalculation.totalPayment), totalPaymentInterest: Double(response.responseEmiCalculation.totalPaymentInterest), loanEmi: Double(response.responseEmiCalculation.loanEmi))
+        
+        let emiCalculatorViewModel = EmiCalculatorViewModel(emiCalculation : viewModel)
+        output.displaySomething(emiCalculatorViewModel)
+    }
 }
