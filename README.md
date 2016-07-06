@@ -1,3 +1,6 @@
+![Language](https://img.shields.io/badge/language-Swift%202-orange.svg)
+![License](https://img.shields.io/github/license/JakeLin/SwiftWeather.svg?style=flat)
+
 ![EMI-Calculator](https://raw.githubusercontent.com/tirupati17/loan-emi-calculator-clean-swift/master/EmiCalculator/Resources/iphone_5s.png)
 
 Calculate your Equated Monthly instalment (EMI) for Home loan, Housing loan, Car loan &amp; Personal loan.
