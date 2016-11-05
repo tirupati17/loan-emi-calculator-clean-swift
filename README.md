@@ -1,5 +1,6 @@
 ![Language](https://img.shields.io/badge/language-Swift%202-orange.svg)
 ![License](https://img.shields.io/github/license/JakeLin/SwiftWeather.svg?style=flat)
+[![Build Status](https://api.travis-ci.org/tirupati17/loan-emi-calculator-clean-swift.svg?branch=master)](https://travis-ci.org/tirupati17/loan-emi-calculator-clean-swift)
 
 ![EMI-Calculator](https://raw.githubusercontent.com/tirupati17/loan-emi-calculator-clean-swift/master/EmiCalculator/Resources/iphone_5s.png)
 
