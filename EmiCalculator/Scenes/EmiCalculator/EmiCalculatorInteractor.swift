@@ -13,12 +13,12 @@ import UIKit
 
 protocol EmiCalculatorInteractorInput
 {
-    func doSomething(request: EmiCalculatorRequest)
+    func doSomething(_ request: EmiCalculatorRequest)
 }
 
 protocol EmiCalculatorInteractorOutput
 {
-    func presentSomething(response: EmiCalculatorResponse)
+    func presentSomething(_ response: EmiCalculatorResponse)
 }
 
 class EmiCalculatorInteractor: EmiCalculatorInteractorInput
@@ -28,7 +28,7 @@ class EmiCalculatorInteractor: EmiCalculatorInteractorInput
     
     // MARK: Business logic
     
-    func doSomething(request: EmiCalculatorRequest)
+    func doSomething(_ request: EmiCalculatorRequest)
     {
         // NOTE: Create some Worker to do the work
         worker = EmiCalculatorWorker()

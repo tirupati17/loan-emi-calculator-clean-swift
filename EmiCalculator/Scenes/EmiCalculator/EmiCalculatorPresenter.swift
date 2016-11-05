@@ -13,12 +13,12 @@ import UIKit
 
 protocol EmiCalculatorPresenterInput
 {
-    func presentSomething(response: EmiCalculatorResponse)
+    func presentSomething(_ response: EmiCalculatorResponse)
 }
 
 protocol EmiCalculatorPresenterOutput: class
 {
-    func displaySomething(viewModel: EmiCalculatorViewModel)
+    func displaySomething(_ viewModel: EmiCalculatorViewModel)
 }
 
 class EmiCalculatorPresenter: EmiCalculatorPresenterInput
@@ -27,7 +27,7 @@ class EmiCalculatorPresenter: EmiCalculatorPresenterInput
     
     // MARK: Presentation logic
     
-    func presentSomething(response: EmiCalculatorResponse)
+    func presentSomething(_ response: EmiCalculatorResponse)
     {
         // NOTE: Format the response from the Interactor and pass the result back to the View Controller
         

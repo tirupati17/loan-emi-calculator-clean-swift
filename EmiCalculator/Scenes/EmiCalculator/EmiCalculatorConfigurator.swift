@@ -15,7 +15,7 @@ import UIKit
 
 extension EmiCalculatorViewController: EmiCalculatorPresenterOutput
 {
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         router.passDataToNextScene(segue)
     }
@@ -36,13 +36,11 @@ class EmiCalculatorConfigurator
     {
         struct Static {
             static var instance: EmiCalculatorConfigurator?
-            static var token: dispatch_once_t = 0
+            static var token: Int = 0
         }
         
-        dispatch_once(&Static.token) {
-            Static.instance = EmiCalculatorConfigurator()
-        }
-        
+        let myGlobal = { Static.instance = EmiCalculatorConfigurator() }()
+        _ = myGlobal
         return Static.instance!
     }
     
