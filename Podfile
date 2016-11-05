@@ -1,11 +1,18 @@
 platform :ios, :deployment_target => "9.0"
-pod 'Flurry-iOS-SDK/FlurrySDK'
-pod 'Fabric'
-pod 'Crashlytics'
 
-pod 'Appirater', '~> 2.0.4'
-pod 'Google-Mobile-Ads-SDK', '~> 7.5'
-pod 'TPKeyboardAvoiding', '~>1.3'
+def pods
+    pod 'Flurry-iOS-SDK/FlurrySDK'
+    pod 'Fabric'
+    pod 'Crashlytics'
+
+    pod 'Appirater', '~> 2.0.4'
+    pod 'Google-Mobile-Ads-SDK', '~> 7.5'
+    pod 'TPKeyboardAvoiding', '~>1.3'
+end
+
+target 'EmiCalculator' do
+    pods
+end
 
 post_install do |installer|
     installer.pods_project.targets.each do |target|
