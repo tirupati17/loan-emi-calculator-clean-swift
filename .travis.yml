@@ -1,0 +1,5 @@
+language: objective-c
+osx_image: xcode8
+xcode_project: EmiCalculator.xcodeproj
+xcode_scheme: EmiCalculator
+xcode_sdk: iphonesimulator10.0
